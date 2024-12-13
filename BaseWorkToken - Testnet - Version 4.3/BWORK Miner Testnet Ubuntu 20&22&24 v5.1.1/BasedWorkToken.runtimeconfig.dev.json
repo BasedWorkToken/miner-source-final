@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/ubuntu22/.dotnet/store/|arch|/|tfm|",
+      "/home/ubuntu22/.nuget/packages"
+    ]
+  }
+}
