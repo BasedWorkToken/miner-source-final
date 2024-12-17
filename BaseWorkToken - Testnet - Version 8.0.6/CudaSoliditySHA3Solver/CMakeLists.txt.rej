@@ -1,0 +1,20 @@
+--- CudaSoliditySHA3Solver/CMakeLists.txt
++++ CudaSoliditySHA3Solver/CMakeLists.txt
+@@ -43,12 +43,14 @@ endif()
+ set(CUDA_NVCC_FLAGS
+   ${CUDA_NVCC_FLAGS}
+   -std=c++11
+-  -Xptxas=-v,-warn-spills
+-  -gencode arch=compute_30,code=sm_30
+-  -gencode arch=compute_35,code=sm_35
++  -Xptxas=-O3,-v,-warn-spills
++  -Xcompiler=-O3
++  -use_fast_math
+   -gencode arch=compute_50,code=sm_50
+   -gencode arch=compute_52,code=sm_52
+   -gencode arch=compute_61,code=sm_61
++  -gencode arch=compute_86,code=sm_86
++  -gencode arch=compute_89,code=sm_89
+ )
+ 
+ if(NOT MSVC)
