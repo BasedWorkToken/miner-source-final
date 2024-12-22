@@ -1,0 +1,10 @@
+.vs/
+obj/
+Debug/
+Release/
+build/
+*.pdb
+*.asm
+*.vcxproj.user
+*.csproj.user
+SoliditySHA3Miner/Properties/PublishProfiles/Publish.pubxml.user
