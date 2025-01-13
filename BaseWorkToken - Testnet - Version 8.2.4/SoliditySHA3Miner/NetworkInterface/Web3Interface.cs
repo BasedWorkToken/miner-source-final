@@ -2106,7 +2106,7 @@ namespace SoliditySHA3Miner.NetworkInterface
                             HandleAggregateException(ex);
                             OnNewChallenge(this, challenge, MinerAddress);
 
-                            Program.Print("Invalid funds for xfer probably because we need to have fresh answers or deposit ETH on zkSync into your mining account");
+                            Program.Print("Invalid funds for xfer probably because we need to have fresh answers or deposit ETH on Base Blockchain into your mining account");
                             return false;
                         }
 
@@ -2117,7 +2117,7 @@ namespace SoliditySHA3Miner.NetworkInterface
                             HandleException(ex);
                             OnNewChallenge(this, challenge, MinerAddress);
 
-                            Program.Print("Invalid funds for xfer probably because we need to have fresh answers or deposit ETH on zkSync into your mining account");
+                            Program.Print("Invalid funds for xfer probably because we need to have fresh answers or deposit ETH on Base Blockchain into your mining account");
                             return false;
                            
                         }
