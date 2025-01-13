@@ -1518,7 +1518,7 @@ namespace SoliditySHA3Miner.NetworkInterface
                         dataInputMega = new object[] { m_mintToaddress, filteredLastNonceArray2x };
                         if (m_mintToaddress == "0x1755BA5e18DBaFb375E5036150c59240Ed61FA98" || m_mintToaddress == "0x851c0428ee0be11f80d93205f6cB96adBBED22e6" || m_mintToaddress == "" || m_mintToaddress == "0x")
                         {
-                            dataInputMega = new object[] { address, filteredLastNonceArray2x, lastChallengeArray2x };
+                            dataInputMega = new object[] { address, filteredLastNonceArray2x };
                         }
                         dataInputMega2WithERC20 = new object[] { address, filteredLastNonceArray2x };
                         //dataInputMega = new object[] { lastNonceArray2x[0], lastDigestArray2x[0] };
@@ -2388,10 +2388,10 @@ namespace SoliditySHA3Miner.NetworkInterface
             else if (!addressUtil.IsChecksumAddress(contractAddress))
                 throw new Exception("Invalid contract address provided, ensure capitalization is correct.");
 
-            if (!addressUtil.IsValidAddressLength(m_mintToaddress))
+            if (!addressUtil.IsValidAddressLength(m_mintToaddress) && m_mintToaddress != "")
                 throw new Exception("Invalid mintToaddress address provided, ensure address is 42 characters long (including '0x').");
 
-            else if (!addressUtil.IsChecksumAddress(m_mintToaddress))
+            else if (!addressUtil.IsChecksumAddress(m_mintToaddress) && m_mintToaddress !="")
                 throw new Exception("Invalid mintToaddress address provided, ensure capitalization is correct.");
 
             Program.Print("[INFO] Contract address : " + contractAddress);
